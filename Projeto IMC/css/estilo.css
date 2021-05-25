@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #4e54c8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container{
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo h2{
+    font-size: 2em;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.estatisticas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 1.5em;
+    padding: 20px 0px;
+}
+
+.estatisticas h3{
+    text-align: center;
+}
+
+.estatisticas p{
+    text-align: center;
+}
+
+form input, form label, form button{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input{
+    font-size: 1em;
+    height: 50px;
+    padding: 0 20px;
+}
+
+form button{
+    border: none;
+    background-color: rgb(0, 132, 255);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.paragrafo-resultado{
+    background-color: rgb(16, 206, 165);
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.paragrafo-erro{
+    background-color: rgb(245, 56, 56);
+    color: #ffffff;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+  
