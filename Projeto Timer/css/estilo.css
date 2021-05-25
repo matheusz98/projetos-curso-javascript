@@ -1,0 +1,53 @@
+@font-face{
+    src: url(../fonte/DS-DIGII.TTF);
+    font-family: digital;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: digital;
+}
+
+body{
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+section{
+    padding: 200px;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.relogio{
+    font-size: 7em;
+    color: #ffffff;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botoes a{
+    font-size: 2em;
+    padding: 0px 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.pausado{
+    color: #000000;
+}
