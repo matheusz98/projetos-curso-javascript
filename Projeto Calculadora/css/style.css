@@ -1,0 +1,106 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+body{
+    background: #C33764;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Calculator Container */
+.calculator-container{
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-container > button{
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 2em;
+    border: 1px solid #c2c1c1;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.calculator-container > button:hover{
+    background-color: rgba(0, 0, 0, 0.582);
+    color: #ffffff;
+}
+
+.large{
+    grid-column: span 2;
+}
+
+/* Display */
+.display{
+    background: #485563;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.display .previous-info{
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.display .current-info{
+    font-size: 2em;
+    color: #ffffff;
+}
+
+/* Button Colors */
+button.ac{
+    background-color: #ff5100;
+    color: #ffffff;
+}
+
+button.delete{
+    background-color: #ff3a3a;
+    color: #ffffff;
+}
+
+button.division{
+    background-color: #04a74d;
+    color: #ffffff;
+}
+
+button.multiplication{
+    background-color: #4811af;
+    color: #ffffff;
+}
+
+button.addition{
+    background-color: #eeb311;
+    color: #ffffff;
+}
+
+button.subtraction{
+    background-color: #0b8aa0;
+    color: #ffffff;
+}
+
+button.equals{
+    background-color: #0e5483;
+    color: #ffffff;
+}
