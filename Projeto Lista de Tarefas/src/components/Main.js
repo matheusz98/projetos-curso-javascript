@@ -9,39 +9,55 @@ export default class Main extends Component {
   state = {
     novaTarefa: '',
     tarefas: [],
+    index: -1,
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { tarefas } = this.state;
+    const { tarefas, index } = this.state;
     let { novaTarefa } = this.state;
     novaTarefa = novaTarefa.trim();
 
     if (tarefas.indexOf(novaTarefa) !== -1 || novaTarefa == '') return;
-    const novasTarefas = [ ... tarefas];
+    const novasTarefas = [...tarefas];
 
-    this.setState({
-      tarefas: [ ... novasTarefas, novaTarefa],
-    });
-  }
+    if (index === -1) {
+      this.setState({
+        tarefas: [...novasTarefas, novaTarefa],
+        novaTarefa: '',
+      });
+    } else {
+      novasTarefas[index] = novaTarefa;
 
-  handleEdit = (e, index) => {
-
-  }
-
-  handleDelete = (e, index) => {
-    const { tarefas } = this.state;
-    const novasTarefas = [ ... tarefas];
-    novasTarefas.splice(index, 1);
-
-    this.setState({
-      tarefas: [ ... novasTarefas],
-    });
+      this.setState({
+        tarefas: [...novasTarefas],
+        index: -1,
+      });
+    }
   }
 
   handleChange = (e) => {
     this.setState({
       novaTarefa: e.target.value,
+    });
+  }
+
+  handleEdit = (e, index) => {
+    const { tarefas } = this.state;
+
+    this.setState({
+      index,
+      novaTarefa: tarefas[index],
+    });
+  }
+
+  handleDelete = (e, index) => {
+    const { tarefas } = this.state;
+    const novasTarefas = [...tarefas];
+    novasTarefas.splice(index, 1);
+
+    this.setState({
+      tarefas: [...novasTarefas],
     });
   }
 
@@ -64,7 +80,7 @@ export default class Main extends Component {
             <li key={tarefa}>
               {tarefa}
               <span>
-                <FaEdit onclick={(e) => this.handleEdit(e, index)} className="edit" />
+                <FaEdit onClick={(e) => this.handleEdit(e, index)} className="edit" />
                 <FaWindowClose onClick={(e) => this.handleDelete(e, index)} className="delete" />
               </span>
             </li>
