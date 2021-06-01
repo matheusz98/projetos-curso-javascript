@@ -5,7 +5,6 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'airbnb',
   ],
   parser: 'babel-eslint',
   parserOptions: {
@@ -19,6 +18,5 @@ module.exports = {
     'react',
   ],
   rules: {
-    'react/jsx-filename-extension': 0,
   },
 };
