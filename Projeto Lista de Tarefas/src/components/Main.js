@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
+import Form from './Form';
+import Tarefas from './Tarefas';
 import './Main.css';
-
-import {FaPlus} from 'react-icons/fa';
-
-import { FaEdit, FaWindowClose} from 'react-icons/fa';
 
 export default class Main extends Component {
   state = {
@@ -84,24 +82,18 @@ export default class Main extends Component {
       <div className="main">
         <h1>Lista de tarefas</h1>
 
-        <form onSubmit={this.handleSubmit} action="#" className="form">
-          <input onChange={this.handleChange} type="text" value={novaTarefa} />
-          <button type="submit">
-            <FaPlus />
-          </button>
-        </form>
+        <Form
+          novaTarefa={novaTarefa}
+          handleSubmit={this.handleSubmit}
+          handleChange={this.handleChange}
+        />
 
-        <ul className="tarefas">
-          {tarefas.map((tarefa, index) => (
-            <li key={tarefa}>
-              {tarefa}
-              <span>
-                <FaEdit onClick={(e) => this.handleEdit(e, index)} className="edit" />
-                <FaWindowClose onClick={(e) => this.handleDelete(e, index)} className="delete" />
-              </span>
-            </li>
-          ))}
-        </ul>
+        <Tarefas
+          tarefas={tarefas}
+          handleEdit={this.handleEdit}
+          handleDelete={this.handleDelete}
+        />
+
       </div>
     );
   }
